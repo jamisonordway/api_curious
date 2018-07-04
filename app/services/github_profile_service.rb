@@ -5,7 +5,7 @@ class GithubProfileService
   end 
 
   def profile
-    GitHubProfile.new(raw_profile)
+    GithubProfile.new(raw_profile)
   end
 
   private

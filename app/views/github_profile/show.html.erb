@@ -1,4 +1,10 @@
-<h1><%= "#{current_user.username} github profile" %></h1>
+<h1><%= "#{current_user.username}'s github profile" %></h1>
 
 
 <%= image_tag @github_profile.image, :class => "profile-image" %>
+<%= @github_profile.name %>
+<%= @github_profile.username %>
+<%= @github_profile.bio %>
+<%= @github_profile.location %>
+
+

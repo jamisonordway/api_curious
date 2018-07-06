@@ -1,5 +1,5 @@
 
-class GitHubProfile
+class GithubProfile
     attr_reader :name,
                 :username,
                 :bio,

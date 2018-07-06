@@ -5,7 +5,7 @@ class GithubProfileService
   end 
 
   def profile
-    GitHubProfile.new(raw_profile)
+    GithubProfile.new(raw_profile)
   end
 
   private
@@ -21,7 +21,7 @@ class GithubProfileService
   end 
 
   def raw_profile
-    JSON.parse(response.body)
+    JSON.parse(response.body, symbolize_names: true)
   end
 
 end 

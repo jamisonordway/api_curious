@@ -22,7 +22,10 @@
 <section class = 'middle'>
   <p><% @github_repos.each do |repo| %></p>
     <section>
-      <p><%= link_to repo[:name], repo[:url] %></p>
-      <p><%= repo[:language] %></p>
+
+      <p><%= link_to repo.name, repo.:url %></p>
+      <p><%= repo.language %></p>
+
+
     </section>
   <% end %>

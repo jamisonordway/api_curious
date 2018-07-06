@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
       new_user.username           = auth_info.extra.raw_info.login
       new_user.token              = auth_info.credentials.token
     end
-    user.update(token: auth_info.credentials.token)
     user
   end
 end

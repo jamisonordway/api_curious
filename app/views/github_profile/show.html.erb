@@ -1,10 +1,28 @@
 <h1><%= "#{current_user.username}'s github profile" %></h1>
 
+<section class = 'main'>
+  <section class = 'main-left'>
 
 <%= image_tag @github_profile.image, :class => "profile-image" %>
-<%= @github_profile.name %>
-<%= @github_profile.username %>
-<%= @github_profile.bio %>
-<%= @github_profile.location %>
+<p class = 'name'><%= @github_profile.name %></p>
+<p class = 'username'><%= @github_profile.username %></p>
+<p class = 'bio'><%= @github_profile.bio %></p>
+<p class 'location'><%= @github_profile.location %></p>
+  </section>
+</section>
+<section class = 'main-right'>
+  <section class = 'top'>
+  <p class = 'repos'>Repositories: <%= @github_profile.number_repos %></p>
+  <p class = 'followers'>Followers: <%= @github_profile.followers %></p>
+  <p class = 'following'>Following: <%= @github_profile.following %></p>
+  </section>
+</section>
 
-
+<h2 class = 'repos-gists'>Latest Repos</h2>
+<section class = 'middle'>
+  <p><% @github_repos.each do |repo| %></p>
+    <section>
+      <p><%= link_to repo[:name], repo[:url] %></p>
+      <p><%= repo[:language] %></p>
+    </section>
+  <% end %>
